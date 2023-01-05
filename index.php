@@ -1,24 +1,22 @@
 <?php
 
-use Controllers\HomeControllers;
+
 use Routes\Route;
 
-require_once "Routes/Routes.php";
-require_once "Controllers/HomeControllers.php";
+require_once "Routes/Route.php";
 
 
-$rout =new Route();
 
-$rout->router('/',function (){
-   HomeControllers::index();
+$route =new Route();
+
+$route->router('/',function (){
+   return "test 4";
 });
 
-$rout->router('/register',function (){
 
-});
 
 
 
 
 $action = $_SERVER['REQUEST_URI'];
-$rout->dispath($action);
+$route->dispath($action);
