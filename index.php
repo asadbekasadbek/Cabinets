@@ -1,16 +1,17 @@
 <?php
 
 
+use Controllers\HomeControllers;
 use Routes\Route;
 
 require_once "Routes/Route.php";
-
+require_once "Controllers/HomeControllers.php";
 
 
 $route =new Route();
 
 $route->router('/',function (){
-   return "test 4";
+   HomeControllers::index();
 });
 
 
