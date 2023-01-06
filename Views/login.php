@@ -2,14 +2,14 @@
 require_once 'layouts/head.php';
 
 if(isset($_SESSION['user'])){
-    header('Location: /1');
+    header('Location: /');
 }
 ?>
 
 
     <div   class="body grid justify-center global align-content"  >
         <div class="w-full max-w-xs">
-            <form  action="/signin.php" method="post"  class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+            <form  action="/signin" method="post"  class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                 <p class="text-green-500 text-xs text-2xl  italic p-2"><?php
                     if(isset($_SESSION['index'])){
                         echo $_SESSION['index'];

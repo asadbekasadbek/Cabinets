@@ -1,6 +1,5 @@
 <?php
 
-session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -11,7 +10,6 @@ session_start();
 
     <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="assets/main.css">
 
     <title>Document</title>
 </head>

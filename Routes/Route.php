@@ -27,7 +27,6 @@ class Route {
     {
         $action = trim($action,'/');
         $callback = $this->routes[$action];
-
         echo call_user_func($callback);
 
     }
