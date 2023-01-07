@@ -16,19 +16,16 @@
 <body>
 <style>
     body {
-        background-image: url("https://vsegda-pomnim.com/uploads/posts/2022-03/1648627780_51-vsegda-pomnim-com-p-azorskie-ostrova-foto-71.jpg");
-        background-size: 100% 100%;
+        background: url("https://vsegda-pomnim.com/uploads/posts/2022-03/1648627780_51-vsegda-pomnim-com-p-azorskie-ostrova-foto-71.jpg") no-repeat;
+        background-size: cover;
 
     }
-
-    .global {
+    .grid{
         display: grid;
-        height: 100vh;
-
+        grid-template-columns: 1fr 1fr;
+        margin: 0 auto;
+        align-items: start;
     }
 
-    .align-content {
-        align-content: center;
-    }
 
 </style>

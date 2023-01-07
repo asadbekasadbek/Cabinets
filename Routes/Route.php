@@ -13,7 +13,7 @@ class Route {
      * @var string $callback
      * @param \Closure $callback Вызывается, когда текущий URL соответствует предоставленному действию
      */
-
+    //Вызывается, когда текущий URL соответствует предоставленному действию
     public function router($action,\Closure $callback){
         $action=trim($action,'/');
         $this->routes[$action]=$callback;
@@ -23,6 +23,7 @@ class Route {
     /**Dispatch the router
      * @return void
      */
+    //возвращает шаблон смотря какой URL сейчас
     function dispath($action)
     {
         $action = trim($action,'/');

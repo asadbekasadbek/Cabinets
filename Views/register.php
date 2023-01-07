@@ -1,8 +1,8 @@
 <?php
 require_once 'layouts/head.php';
-
+// шаблон регистрации
 if(isset($_SESSION['user'])){
-    header('Location: /');
+    header('Location: /profile');
 }
 ?>
 <!-- component -->

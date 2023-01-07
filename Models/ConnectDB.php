@@ -5,8 +5,7 @@ namespace Models;
 use PDO;
 use PDOException;
 
-error_reporting(E_ALL);
-date_default_timezone_set('Asia/Tashkent');
+
 
 class ConnectDB
 {
@@ -25,7 +24,7 @@ class ConnectDB
         $this->username = $username;
         $this->password = $password;
     }
-
+    //метод подключается к базе данных (в настоящее время на mysql)
     public function connectDB()
     {
         $servername = $this->servername;

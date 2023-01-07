@@ -1,15 +1,16 @@
 <?php
 require_once 'layouts/head.php';
-
+//шаблон шаблон авторизации
 if(isset($_SESSION['user'])){
-    header('Location: /');
+    header('Location: /profile');
 }
 ?>
 
 
-    <div   class="body grid justify-center global align-content"  >
-        <div class="w-full max-w-xs">
-            <form  action="/signin" method="post"  class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+    <div   style="width: 100vw; display: flex;justify-content: center;margin-top: 10%" >
+
+
+            <form  action="/signin" method="post" style="width: 320px;height:400px;"  class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                 <p class="text-green-500 text-xs text-2xl  italic p-2"><?php
                     if(isset($_SESSION['index'])){
                         echo $_SESSION['index'];
