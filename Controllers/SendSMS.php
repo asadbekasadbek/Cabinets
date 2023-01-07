@@ -7,7 +7,7 @@ use PDO;
 
 class SendSMS
 {
-    //authorization: Bearer токен устарел  нужно новы чтобы отправить смс
+    //authorization: Bearer токен устарел  нужно новы чтобы отправить смс можно получить на сайте https://dev.routee.net/
     public static function sendSms(){
 
         $curl = curl_init();

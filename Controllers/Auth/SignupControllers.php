@@ -36,7 +36,7 @@ class SignupControllers
                 exit();
             }
 
-            $sql1 = "SELECT * FROM users WHERE email IN ('" . $telephone . "')";
+            $sql1 = "SELECT * FROM users WHERE telephone IN ('" . $telephone . "')";
             $result = $connect->query($sql1)->fetchAll(PDO::FETCH_ASSOC);
             if ($result) {
                 $_SESSION['telephone'] = 'Номер существует пожалуйста выберите другой email';
