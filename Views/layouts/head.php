@@ -16,7 +16,7 @@
 <body>
 <style>
     body {
-        background: url("https://vsegda-pomnim.com/uploads/posts/2022-03/1648627780_51-vsegda-pomnim-com-p-azorskie-ostrova-foto-71.jpg") no-repeat;
+        background: rgba(255, 248, 248, 0.93);
         background-size: cover;
 
     }

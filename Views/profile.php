@@ -32,6 +32,26 @@ $cabinets->reservedCabinets($connect);
         }
         ?></h1>
 </div>
+
+
+<div style="display: flex;justify-content: center;" >
+    <h1 style="color: green"><?php
+        if( isset($_SESSION['sms_success'])){
+            echo $_SESSION['sms_success'];
+            unset($_SESSION['sms_success']);
+        }
+        ?></h1>
+</div>
+<div style="display: flex;justify-content: center;" >
+    <h1 style="color: red"><?php
+        if( isset($_SESSION['sms_error'])){
+            echo $_SESSION['sms_error'];
+            unset($_SESSION['sms_error']);
+        }
+        ?></h1>
+</div>
+
+
 <div class="body grid">
 
 

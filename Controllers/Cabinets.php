@@ -12,7 +12,10 @@ class Cabinets
         $result = $connect->query($sql1)->fetchAll(PDO::FETCH_ASSOC);
         if ($result) {
             $_SESSION['free_cabinets'] = $result;
+        }else{
+            $_SESSION['free_cabinets']=[];
         }
+
     }
 
     public function reservedCabinets($connect)
@@ -21,6 +24,9 @@ class Cabinets
         $result = $connect->query($sql1)->fetchAll(PDO::FETCH_ASSOC);
         if ($result) {
             $_SESSION['reserved_сabinets'] = $result;
+        }else{
+            $_SESSION['reserved_сabinets']=[];
         }
+
     }
 }

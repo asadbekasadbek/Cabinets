@@ -6,6 +6,8 @@ use Controllers\Auth\SigninControllers;
 use Controllers\Auth\SignupControllers;
 use Controllers\HomeControllers;
 use Controllers\SendMail;
+use Controllers\SendSMS;
+use Models\ConnectDB;
 use Routes\Route;
 
 session_start();
@@ -19,6 +21,7 @@ require_once "Controllers/Auth/SignupControllers.php";
 require_once "Controllers/Auth/SigninControllers.php";
 require_once "Controllers/Auth/LogoutControllers.php";
 require_once "Controllers/SendMail.php";
+require_once "Controllers/SendSMS.php";
 
 $route = new Route();
 //начальная страница
@@ -46,8 +49,11 @@ $route->router('/signin', function () {
 $route->router('/logout', function () {
     LogoutControllers::logout();
 });
+//это метод отвечает отправка уведомлений (email и sms)
 $route->router('/send_message', function () {
+    SendSMS::sendSms();
     SendMail::sendMail();
+    header('Location: /profile');
 });
 
 
@@ -110,3 +116,6 @@ $route->router('/send_message', function () {
 
 $action = $_SERVER['REQUEST_URI'];
 $route->dispath($action);
+
+
+

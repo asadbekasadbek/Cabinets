@@ -7,6 +7,7 @@ use PDO;
 
 class SendMail
 {
+    //Будет работать если загрузить на сервер сейчас сохраняют локально
     public static function sendMail()
     {
 
@@ -45,7 +46,7 @@ class SendMail
                 $id=$value['id'];
             }
         } else {
-            $_SESSION['ваш заказ принят, вы забронировали кабинет'] = "Извините мы не нашли ваш запрос кабинет";
+            $_SESSION['free_cabinets_error'] = "Извините мы не нашли ваш запрос кабинет";
             header('Location: /profile');
         }
          $mail=   mail($to,$subject,$message,$headers);
@@ -55,6 +56,6 @@ class SendMail
               $sql3="INSERT INTO `reserved_сabinets` (`id`, `number_cabinet`, `start_booking_cabinet`, `end_cabinet_booking`, `user_name`) VALUES (NULL, '$number_cabinet', '$start_booking_cabinet', '$end_cabinet_booking', '$user_name');";
               $connect->query($sql3)->fetchAll(PDO::FETCH_ASSOC);
          }
-         header('Location: /profile');
+
     }
 }
